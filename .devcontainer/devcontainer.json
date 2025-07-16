@@ -9,14 +9,32 @@
 		"dockerfile": "../Dockerfile"
 	},
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+	"forwardPorts": [6080, 5901],
 
 	// Uncomment the next line to run commands after the container is created.
-	"postCreateCommand": "git config --global user.name \"Brendan Richards\" && git config --global user.email \"quend00@gmail.com\""
+	"postCreateCommand": "git config --global user.name \"Brendan Richards\" && git config --global user.email \"quend00@gmail.com\"",
+
+	"features": {
+		"desktop-lite": {
+			"password": "vscode",
+			"webPort": "6080",
+			"vncPort": "5901"
+		}
+	},
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"Ranch-Hand-Robotics.rde-ros-2",
+				"ms-python.debugpy",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
+		
 
 	// Configure tool-specific properties.
 	// "customizations": {},

@@ -30,7 +30,8 @@
 			"extensions": [
 				"Ranch-Hand-Robotics.rde-ros-2",
 				"ms-python.debugpy",
-				"ms-vscode.cpptools-extension-pack"
+				"ms-vscode.cpptools-extension-pack",
+				"twxs.cmake"
 			]
 		}
 	}
